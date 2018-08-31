@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .upload{
+            display: block;
+            width: 200px;
+            height: 50px;
+            border-radius: 25px;
+            background-color: bisque;
+            line-height: 50px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <label class="upload" for="uploadImage">
+        打开相册
+        <input id="uploadImage" type="file" accept="image/gif,image/jpeg,image/jpg,image/png" hidden/>
+    </label>
+    <br/>
+    <label class="upload" for="carameImage">
+        拍照
+        <input id="carameImage" type="file" accept="image/*" capture="camera" hidden />
+    </label>
+</body>
+</html>
