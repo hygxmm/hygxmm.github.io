@@ -4,10 +4,9 @@ var cacheFiles = [
     '/',
     './index.html',
     './index.js',
-    './img/p30_1.webp',
-    './img/p30_2.webp',
-    './img/p30_3.webp',
-    './img/p30_4.webp',
+    './img/demo',
+    "./img/demo_01.png",
+    "./img/search.svg",
 ]
 
 
