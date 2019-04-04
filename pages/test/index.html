@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="notifyMe()">发送通知</button>
+    <script>
+        function notifyMe() {
+            if (!("Notification" in window)) {
+                alert("浏览器不支持消息通知")
+            } else if (Notification.permission == "granted") {
+                var notification = new Notification("hi there!")
+            } else if (Notification.permission !== 'denied') {
+                Notification.requestPermission(function (permission) {
+                    if (permission === 'granted') {
+                        var notification = new Notification("hi there!")
+                    }
+                })
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>
