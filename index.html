@@ -11,6 +11,8 @@
 <body>
     <button onclick="notifyMe()">发送通知</button>
     <script>
+        Notification.requestPermission();
+
         function notifyMe() {
             if (!("Notification" in window)) {
                 alert("浏览器不支持消息通知")
