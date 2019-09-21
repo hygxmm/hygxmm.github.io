@@ -1,6 +1,6 @@
 module.exports = {
     title: '前端笔记',//网站标题
-    description: 'HTML/ CSS / SACC / LESS / JavaScript / Vue / React / Angular / Node / Flutter / 微信小程序 / 数据结构 / 算法 / 浏览器 / 网络 / 优化',
+    description: 'HTML/ CSS / JavaScript / Vue / React / Angular / Node / Flutter / 微信小程序 / 数据结构 / 算法 / 浏览器 / 网络 / 优化',
     head: [
         ['link', { rel: 'icon', href: '/logo.png' }],//设置显示在浏览器标签页中的图标
     ],
@@ -21,12 +21,16 @@ module.exports = {
             {
                 title: 'HTML',
                 children: [
-                    ['/pages/html/', '奇淫巧计']
+                    ['/pages/html/', '奇淫巧计'],
+                    ['/pages/html/notification.md', 'Notification 桌面通知'],
+
                 ]
             },
             {
                 title: 'CSS',
-                children: [ /****/]
+                children: [
+                    ['/pages/css/skill', '常用示例']
+                ]
             },
             {
                 title: 'JavaScript',
@@ -70,6 +74,15 @@ module.exports = {
                     ['/pages/vue/vuex.md', 'Vuex 状态管理'],
                     ['/pages/vue/vue-router.md', 'Vue-router 路由']
                 ]
+            },
+            {
+                title: 'Flutter',
+                children: [
+                    ['/pages/flutter/', 'Flutter 简介'],
+                    ['/pages/flutter/button.md', 'Flutter Widget 之 Button'],
+                    ['/pages/flutter/input.md', 'Flutter Widget 之 Input'],
+                    ['/pages/flutter/container.md', 'Flutter Widget 之 Container'],
+                ],
             },
             {
                 title: '面试',

@@ -11,6 +11,6 @@
 ```css
 display: -webkit-box
 -webkit-box-orient: vertical
--web-line-clamp: 3
+-web-line-clamp: 2
 overflow: hidden
 ```
