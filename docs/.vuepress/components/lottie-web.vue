@@ -1,8 +1,5 @@
 <template>
-  <div>
-    <h1>lottie-web 测试</h1>
-    <div class="lottie-wrap"></div>
-  </div>
+  <div class="lottie-wrap"></div>
 </template>
 
 <script>

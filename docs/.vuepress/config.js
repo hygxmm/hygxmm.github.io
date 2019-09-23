@@ -16,7 +16,7 @@ module.exports = {
         navbar: false,
         sidebarDepth: 2,
         sidebar: [
-            ['/pages/', '简介'],
+            // ['/pages/', '简介'],
             ['/pages/grammar/', 'Markdown语法'],
             {
                 title: 'HTML',
@@ -79,6 +79,7 @@ module.exports = {
                 title: 'Flutter',
                 children: [
                     ['/pages/flutter/', 'Flutter 简介'],
+                    ['/pages/flutter/flex.md', 'Flutter Flex布局组件'],
                     ['/pages/flutter/button.md', 'Flutter Widget 之 Button'],
                     ['/pages/flutter/input.md', 'Flutter Widget 之 Input'],
                     ['/pages/flutter/container.md', 'Flutter Widget 之 Container'],
