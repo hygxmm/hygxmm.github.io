@@ -1,7 +1,3 @@
-# CSS
-
-# CSS
-
 ## window 视图属性
 
 * innerWidth/innerHeight
@@ -30,7 +26,9 @@
 * width/height
     * 显示器屏幕的宽高
     * 使用 screen.width
+
 ## DocumentView 文档视图 和 ElementView 元素视图 方法
+
 * elementFromPoint()
     * 返回给定坐标处所在的元素
     * 示例 document.elementFromPoint(100,100)
@@ -44,7 +42,9 @@
 * scrollIntoView()
     * 让元素滚动到可视区域
     * 示例 element.scrollIntoView()
+
 ## 元素视图属性
+
 * clientLeft/clientTop
     * 表示内容区域的左上角相对于整个元素左上角的位置(包括边框)
     * 示例 element.clientLeft
@@ -66,7 +66,9 @@
 * scrollWidth/scrollHeight
     * 表示整个内容区域的宽高,包括隐藏的部分
     * 示例 element.scrollWidth
+
 ## 鼠标位置
+
 * clientX/clientY
     * 鼠标相对于window的偏移
     * 示例 event.clientX

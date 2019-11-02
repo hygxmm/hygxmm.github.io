@@ -5,9 +5,9 @@ actionText: Get Started →
 actionLink: /pages/
 features:
 - title: 基础
-  details: 
+  details: 敷衍敷衍
 - title: 进阶
-  details: 
+  details: 敷衍敷衍
 - title: 高级
-  details: 
+  details: 敷衍敷衍
 ---

@@ -12,10 +12,17 @@
 
 #### MainAxisAlignment
 1. MainAxisAlignment.start
-2. MainAxisAlignment.
-3. MainAxisAlignment
-4. MainAxisAlignment
-5. MainAxisAlignment
+2. MainAxisAlignment.end
+3. MainAxisAlignment.center
+4. MainAxisAlignment.spaceAround
+5. MainAxisAlignment.spaceBetween
+
+#### CrossAxisAlignment
+1. CrossAxisAlignment.start
+2. CrossAxisAlignment.end
+3. CrossAxisAlignment.center
+4. CrossAxisAlignment.baseline
+5. CrossAxisAlignment.stretch
 
 ## Column 纵向布局组件
 
