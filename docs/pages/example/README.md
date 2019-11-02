@@ -1,5 +1,6 @@
 ## lottie-web 
 <lottie-web />
+
 ## 上传图片预览
 
 * 支持选择和拖拽两种方式

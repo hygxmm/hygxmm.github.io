@@ -16,14 +16,13 @@ module.exports = {
         navbar: false,
         sidebarDepth: 2,
         sidebar: [
-            // ['/pages/', '简介'],
+            ['/pages/', '简介'],
             ['/pages/grammar/', 'Markdown语法'],
             {
                 title: 'HTML',
                 children: [
                     ['/pages/html/', '奇淫巧计'],
                     ['/pages/html/notification.md', 'Notification 桌面通知'],
-
                 ]
             },
             {
@@ -60,7 +59,7 @@ module.exports = {
             {
                 title: '浏览器',
                 children: [
-                    ['/pages/browser/', '渲染流程'],
+                    ['/pages/browser/render.md', '渲染'],
                     ['/pages/browser/storage.md', '存储']
                 ]
             },
