@@ -13,6 +13,7 @@ module.exports = {
         nav: [
             { text: '', link: '' },
         ],
+        smoothScroll: true,
         navbar: false,
         sidebarDepth: 2,
         sidebar: [
@@ -108,4 +109,9 @@ module.exports = {
         ]
     },
     evergreen: true,
+    plugins: [
+        '@vuepress/active-header-links',
+        '@vuepress/back-to-top',
+        '@vuepress/nprogress',
+    ],
 }
