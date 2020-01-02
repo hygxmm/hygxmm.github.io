@@ -37,12 +37,11 @@ module.exports = {
                 children: [
                     ['/pages/javascript/', '基础'],
                     ['/pages/javascript/array.md', '数组'],
+                    ['/pages/javascript/event.md', '事件循环'],
+
                 ]
             },
-            {
-                title: '数据结构',
-                children: [ /****/]
-            },
+            ['/pages/structure/', '数据结构'],
             {
                 title: '算法',
                 children: [
