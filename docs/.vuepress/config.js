@@ -84,6 +84,14 @@ module.exports = {
                 ]
             },
             {
+                title: 'Node',
+                children: [
+                    ['/pages/node/', '简介'],
+                    ['/pages/node/fs.md', 'fs-文件模块'],
+                    ['/pages/node/zlib.md', 'zlib-压缩模块']
+                ],
+            },
+            {
                 title: 'Flutter',
                 children: [
                     ['/pages/flutter/', 'Flutter 简介'],

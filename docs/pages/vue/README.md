@@ -226,4 +226,5 @@ new Vue({
     }
 })
 ```
-
+# Vue小技巧
+- `this.$forceUpdate()` 这不会更新任何计算属性，调用forceUpdate仅仅强制重新渲染视图。
