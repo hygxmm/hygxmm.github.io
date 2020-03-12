@@ -22,14 +22,15 @@ module.exports = {
             {
                 title: 'HTML',
                 children: [
-                    ['/pages/html/', '奇淫巧计'],
+                    ['/pages/html/', '基础'],
                     ['/pages/html/notification.md', 'Notification 桌面通知'],
                 ]
             },
             {
                 title: 'CSS',
                 children: [
-                    ['/pages/css/skill', '常用示例']
+                    ['/pages/html/', '基础'],
+                    ['/pages/css/example.md', '常用示例']
                 ]
             },
             {
@@ -38,24 +39,23 @@ module.exports = {
                     ['/pages/javascript/', '基础'],
                     ['/pages/javascript/array.md', '数组'],
                     ['/pages/javascript/event.md', '事件循环'],
+                    ['/pages/javascript/example.md', '示例'],
 
                 ]
             },
-            ['/pages/structure/', '数据结构'],
+            {
+                title: '数据结构',
+                children: [
+                    ['/pages/structure/', '简介'],
+                ]
+            },
             {
                 title: '算法',
                 children: [
                     ['/pages/algorithm/', '简介'],
-                    ['/pages/algorithm/', '排序算法'],
                 ]
             },
-            {
-                title: '设计模式',
-                children: [
-                    ['/pages/algorithm/', '简介'],
-                    ['/pages/algorithm/', '排序算法'],
-                ]
-            },
+            ['/pages/pattern/', '设计模式'],
             {
                 title: '浏览器',
                 children: [

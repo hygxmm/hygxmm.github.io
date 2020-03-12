@@ -16,7 +16,7 @@ const sort = (arr) => {
 }
 ```
 #### 动画演示 
-\
+
 <algorithm-bubble />
 
 ## 快速排序算法

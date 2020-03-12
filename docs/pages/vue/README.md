@@ -228,3 +228,19 @@ new Vue({
 ```
 # Vue小技巧
 - `this.$forceUpdate()` 这不会更新任何计算属性，调用forceUpdate仅仅强制重新渲染视图。
+
+
+## watch 和 computed 的区别和运用的场景
+- 前者是计算属性,依赖其他属性计算值,并且`computer`的值有缓存,只有当计算值变化才变化触发渲染.后者监听到值得变化就会执行回调.
+- `computer`就是简单计算一下,适用于渲染页面.`watcher`适合做一些复杂业务逻辑.
+- 前者有依赖两个`watcher`,`computer watcher`和`渲染 watcher`.判断计算出的值变化后`watcher`派发更新触发渲染.
+
+## vue中的父子通信
++ 父传子
+    - 通过`props`
+    - 通过`$children`访问子组件数组
++ 子传父
+    - 通过`$emit`
+    - 通过`$parent`访问父组件
++ 使用`EventBus`
++ 使用`Vuex`解决一切
