@@ -104,7 +104,10 @@ module.exports = {
             {
                 title: '面试',
                 children: [
-                    ['/pages/interview/', '面试相关']
+                    ['/pages/interview/primary.md', '初级'],
+                    ['/pages/interview/intermediate.md', '中级'],
+                    ['/pages/interview/senior.md', '高级'],
+                    ['/pages/interview/', '题库'],
                 ]
             },
             {
