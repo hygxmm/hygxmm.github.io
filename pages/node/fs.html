@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Node.js 文件系统 | 前端笔记</title>
+    <meta name="description" content="HTML/ CSS / JavaScript / Vue / React / Angular / Node / Flutter / 微信小程序 / 数据结构 / 算法 / 浏览器 / 网络 / 优化">
+    <link rel="icon" href="/logo.png">
+    
+    <link rel="preload" href="/assets/css/0.styles.8638f2b0.css" as="style"><link rel="preload" href="/assets/js/app.39541f21.js" as="script"><link rel="preload" href="/assets/js/37.df7a0d87.js" as="script"><link rel="prefetch" href="/assets/js/10.08fed62e.js"><link rel="prefetch" href="/assets/js/11.37eb9f84.js"><link rel="prefetch" href="/assets/js/12.92c0644b.js"><link rel="prefetch" href="/assets/js/13.70888217.js"><link rel="prefetch" href="/assets/js/14.74c31e3a.js"><link rel="prefetch" href="/assets/js/15.fe3e6dcd.js"><link rel="prefetch" href="/assets/js/16.8c9e1c14.js"><link rel="prefetch" href="/assets/js/17.ac24dc0c.js"><link rel="prefetch" href="/assets/js/18.36b7ba5a.js"><link rel="prefetch" href="/assets/js/19.21b6b220.js"><link rel="prefetch" href="/assets/js/2.cea8704f.js"><link rel="prefetch" href="/assets/js/20.14a23f1b.js"><link rel="prefetch" href="/assets/js/21.ea74a7bd.js"><link rel="prefetch" href="/assets/js/22.95fa3e7f.js"><link rel="prefetch" href="/assets/js/23.51f0cf98.js"><link rel="prefetch" href="/assets/js/24.f9368202.js"><link rel="prefetch" href="/assets/js/25.05d9fd72.js"><link rel="prefetch" href="/assets/js/26.c3c12b54.js"><link rel="prefetch" href="/assets/js/27.970f75dd.js"><link rel="prefetch" href="/assets/js/28.05827c4c.js"><link rel="prefetch" href="/assets/js/29.fa8cc34e.js"><link rel="prefetch" href="/assets/js/3.b1fde5a4.js"><link rel="prefetch" href="/assets/js/30.c52ce080.js"><link rel="prefetch" href="/assets/js/31.5ef72380.js"><link rel="prefetch" href="/assets/js/32.448b5d2d.js"><link rel="prefetch" href="/assets/js/33.bc043b6a.js"><link rel="prefetch" href="/assets/js/34.2c4c65f5.js"><link rel="prefetch" href="/assets/js/35.3f19ba77.js"><link rel="prefetch" href="/assets/js/36.7f0c33ca.js"><link rel="prefetch" href="/assets/js/38.6cf87b8f.js"><link rel="prefetch" href="/assets/js/39.51df4333.js"><link rel="prefetch" href="/assets/js/4.ec75ce38.js"><link rel="prefetch" href="/assets/js/40.d2199066.js"><link rel="prefetch" href="/assets/js/41.74d3bfb8.js"><link rel="prefetch" href="/assets/js/42.5469bc86.js"><link rel="prefetch" href="/assets/js/43.9bc0cfad.js"><link rel="prefetch" href="/assets/js/44.3c4b2a59.js"><link rel="prefetch" href="/assets/js/45.ff671763.js"><link rel="prefetch" href="/assets/js/46.4885ee9a.js"><link rel="prefetch" href="/assets/js/47.df28a4f2.js"><link rel="prefetch" href="/assets/js/5.6835230e.js"><link rel="prefetch" href="/assets/js/6.7f346e9f.js"><link rel="prefetch" href="/assets/js/7.bc007aec.js"><link rel="prefetch" href="/assets/js/8.3e31c965.js"><link rel="prefetch" href="/assets/js/9.6c2be857.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8638f2b0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-navbar"><!----> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/pages/node/.html" class="nav-link"></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/pages/" aria-current="page" class="sidebar-link">简介</a></li><li><a href="/pages/grammar/" class="sidebar-link">Markdown语法</a></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>HTML</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>JavaScript</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>数据结构</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>算法</span> <span class="arrow right"></span></p> <!----></div></li><li><a href="/pages/pattern/" class="sidebar-link">设计模式</a></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>浏览器</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>网络</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>React</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Vue</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>Node</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/pages/node/" aria-current="page" class="sidebar-link">简介</a></li><li><a href="/pages/node/fs.html" aria-current="page" class="active sidebar-link">fs-文件模块</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/node/fs.html#文件操作的基本方法" class="sidebar-link">文件操作的基本方法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/node/fs.html#文件读取" class="sidebar-link">文件读取</a></li><li class="sidebar-sub-header"><a href="/pages/node/fs.html#文件写入" class="sidebar-link">文件写入</a></li><li class="sidebar-sub-header"><a href="/pages/node/fs.html#文件追加写入" class="sidebar-link">文件追加写入</a></li><li class="sidebar-sub-header"><a href="/pages/node/fs.html#文件拷贝写入" class="sidebar-link">文件拷贝写入</a></li><li class="sidebar-sub-header"><a href="/pages/node/fs.html#打开文件" class="sidebar-link">打开文件</a></li><li class="sidebar-sub-header"><a href="/pages/node/fs.html#关闭文件" class="sidebar-link">关闭文件</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/node/fs.html#文件目录操作方法" class="sidebar-link">文件目录操作方法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/node/fs.html#创建文件目录" class="sidebar-link">创建文件目录</a></li><li class="sidebar-sub-header"><a href="/pages/node/fs.html#读取文件目录" class="sidebar-link">读取文件目录</a></li><li class="sidebar-sub-header"><a href="/pages/node/fs.html#删除文件目录" class="sidebar-link">删除文件目录</a></li><li class="sidebar-sub-header"><a href="/pages/node/fs.html#删除文件操作" class="sidebar-link">删除文件操作</a></li></ul></li><li class="sidebar-sub-header"><a href="/pages/node/fs.html#递归创建目录" class="sidebar-link">递归创建目录</a></li><li class="sidebar-sub-header"><a href="/pages/node/fs.html#fs-dir-类" class="sidebar-link">fs.Dir 类</a></li><li class="sidebar-sub-header"><a href="/pages/node/fs.html#fs-dirent-类" class="sidebar-link">fs.Dirent 类</a></li><li class="sidebar-sub-header"><a href="/pages/node/fs.html#fs-fswatcher-类" class="sidebar-link">fs.FSWatcher 类</a></li><li class="sidebar-sub-header"><a href="/pages/node/fs.html#fs-readstream-类" class="sidebar-link">fs.ReadStream 类</a></li><li class="sidebar-sub-header"><a href="/pages/node/fs.html#fs-stats-类" class="sidebar-link">fs.Stats 类</a></li><li class="sidebar-sub-header"><a href="/pages/node/fs.html#fs-writestream-类" class="sidebar-link">fs.WriteStream 类</a></li><li class="sidebar-sub-header"><a href="/pages/node/fs.html#fs-readlink-和-fs-readlinksync" class="sidebar-link">fs.readlink 和 fs.readlinkSync</a></li><li class="sidebar-sub-header"><a href="/pages/node/fs.html#fs-read-和-fs-readsync" class="sidebar-link">fs.read 和 fs.readSync</a></li><li class="sidebar-sub-header"><a href="/pages/node/fs.html#fs-readfile-和-fs-readfilesync" class="sidebar-link">fs.readFile 和 fs.readFileSync</a></li><li class="sidebar-sub-header"><a href="/pages/node/fs.html#fs-readdir-和-fs-readdirsync" class="sidebar-link">fs.readdir 和 fs.readdirSync</a></li><li class="sidebar-sub-header"><a href="/pages/node/fs.html#fs-realpath-和-fs-realpathsync" class="sidebar-link">fs.realpath 和 fs.realpathSync</a></li><li class="sidebar-sub-header"><a href="/pages/node/fs.html#fs-rename-和-fs-renamesync" class="sidebar-link">fs.rename 和 fs.renameSync</a></li><li class="sidebar-sub-header"><a href="/pages/node/fs.html#fs-rmdir-和-fs-rmdirsync" class="sidebar-link">fs.rmdir 和 fs.rmdirSync</a></li></ul></li><li><a href="/pages/node/zlib.html" class="sidebar-link">zlib-压缩模块</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Flutter</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>面试</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>示例</span> <span class="arrow right"></span></p> <!----></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="node-js-文件系统"><a href="#node-js-文件系统" class="header-anchor">#</a> Node.js 文件系统</h1> <p>Node.js提供一组类似<code>UNIX(POSIX)</code>标准的文件操作API.Node导入文件系统模块的语法如下:</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="同步和异步"><a href="#同步和异步" class="header-anchor">#</a> 同步和异步</h3> <p>Node.js文件系统模块中的方法均有异步和同步版本.异步的方法函数最后一个参数为回调函数,回调函数的第一个参数包含了错误信息.建议使用异步方法,比起同步,异步方法性能更高,速度更快,而且没有阻塞.</p> <h2 id="文件操作的基本方法"><a href="#文件操作的基本方法" class="header-anchor">#</a> 文件操作的基本方法</h2> <ul><li><h3 id="文件读取"><a href="#文件读取" class="header-anchor">#</a> 文件读取</h3></li></ul> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 同步写法</span>
+<span class="token keyword">let</span> data <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span><span class="token string">'1.txt'</span><span class="token punctuation">,</span><span class="token string">'utf8'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 异步写法</span>
+fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'1.txt'</span><span class="token punctuation">,</span><span class="token string">'utf8'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span>data</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ul><li><h3 id="文件写入"><a href="#文件写入" class="header-anchor">#</a> 文件写入</h3></li></ul> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 同步写法</span>
+fs<span class="token punctuation">.</span><span class="token function">writeFileSync</span><span class="token punctuation">(</span><span class="token string">&quot;2.txt&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Hello world&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 异步写法</span>
+fs<span class="token punctuation">.</span><span class="token function">writeFile</span><span class="token punctuation">(</span><span class="token string">&quot;2.txt&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Hello world&quot;</span><span class="token punctuation">,</span><span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ul><li><h3 id="文件追加写入"><a href="#文件追加写入" class="header-anchor">#</a> 文件追加写入</h3></li></ul> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 同步写法</span>
+fs<span class="token punctuation">.</span><span class="token function">appendFileSync</span><span class="token punctuation">(</span><span class="token string">&quot;3.txt&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot; world&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 异步写法</span>
+fs<span class="token punctuation">.</span><span class="token function">appendFile</span><span class="token punctuation">(</span><span class="token string">&quot;3.txt&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot; world&quot;</span><span class="token punctuation">,</span> <span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ul><li><h3 id="文件拷贝写入"><a href="#文件拷贝写入" class="header-anchor">#</a> 文件拷贝写入</h3></li></ul> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 同步写法</span>
+fs<span class="token punctuation">.</span><span class="token function">copyFileSync</span><span class="token punctuation">(</span><span class="token string">&quot;3.txt&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;4.txt&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 异步写法</span>
+fs<span class="token punctuation">.</span><span class="token function">copyFile</span><span class="token punctuation">(</span><span class="token string">&quot;3.txt&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;4.txt&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ul><li><h3 id="打开文件"><a href="#打开文件" class="header-anchor">#</a> 打开文件</h3></li></ul> <div class="language-js line-numbers-mode"><pre class="language-js"><code>fs<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">&quot;4.txt&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;r&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> fd</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>fd<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li><h3 id="关闭文件"><a href="#关闭文件" class="header-anchor">#</a> 关闭文件</h3></li></ul> <div class="language-js line-numbers-mode"><pre class="language-js"><code>fs<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span>fd<span class="token punctuation">,</span> <span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;关闭成功&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="文件目录操作方法"><a href="#文件目录操作方法" class="header-anchor">#</a> 文件目录操作方法</h2> <ul><li><h3 id="创建文件目录"><a href="#创建文件目录" class="header-anchor">#</a> 创建文件目录</h3></li></ul> <div class="language-js line-numbers-mode"><pre class="language-js"><code> <span class="token comment">// 同步方法</span>
+ fs<span class="token punctuation">.</span><span class="token function">mkdirSync</span><span class="token punctuation">(</span><span class="token string">'/a/b'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token comment">// 异步方法</span>
+ fs<span class="token punctuation">.</span><span class="token function">mkdir</span><span class="token punctuation">(</span><span class="token string">&quot;a/b/c&quot;</span><span class="token punctuation">,</span> <span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>err<span class="token punctuation">)</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;创建成功&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><ul><li><h3 id="读取文件目录"><a href="#读取文件目录" class="header-anchor">#</a> 读取文件目录</h3></li></ul> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 同步方法</span>
+<span class="token keyword">let</span> data <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readdirSync</span><span class="token punctuation">(</span><span class="token string">&quot;a/b&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 异步方法</span>
+fs<span class="token punctuation">.</span><span class="token function">readdir</span><span class="token punctuation">(</span><span class="token string">&quot;a/b&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>err<span class="token punctuation">)</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><ul><li><h3 id="删除文件目录"><a href="#删除文件目录" class="header-anchor">#</a> 删除文件目录</h3></li></ul> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 同步方法</span>
+fs<span class="token punctuation">.</span><span class="token function">rmdirSync</span><span class="token punctuation">(</span><span class="token string">&quot;a/b&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 异步方法</span>
+fs<span class="token punctuation">.</span><span class="token function">rmdir</span><span class="token punctuation">(</span><span class="token string">&quot;a/b&quot;</span><span class="token punctuation">,</span> <span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>err<span class="token punctuation">)</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;删除成功&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><ul><li><h3 id="删除文件操作"><a href="#删除文件操作" class="header-anchor">#</a> 删除文件操作</h3></li></ul> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 同步方法</span>
+fs<span class="token punctuation">.</span><span class="token function">unlinkSync</span><span class="token punctuation">(</span><span class="token string">&quot;a/inde.js&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 异步方法</span>
+fs<span class="token punctuation">.</span><span class="token function">unlink</span><span class="token punctuation">(</span><span class="token string">&quot;a/index.js&quot;</span><span class="token punctuation">,</span> <span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>err<span class="token punctuation">)</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;删除成功&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h2 id="递归创建目录"><a href="#递归创建目录" class="header-anchor">#</a> 递归创建目录</h2> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">mkPathSync</span><span class="token punctuation">(</span><span class="token parameter">dirPath</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">let</span> parts <span class="token operator">=</span> dirPath<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span>sep<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>parts<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">let</span> cur <span class="token operator">=</span> parts<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span>sep<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">try</span><span class="token punctuation">{</span>
+            <span class="token keyword">await</span> fs<span class="token punctuation">.</span><span class="token function">access</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">await</span> fs<span class="token punctuation">.</span><span class="token function">mkdir</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h2 id="fs-dir-类"><a href="#fs-dir-类" class="header-anchor">#</a> fs.Dir 类</h2> <h2 id="fs-dirent-类"><a href="#fs-dirent-类" class="header-anchor">#</a> fs.Dirent 类</h2> <h2 id="fs-fswatcher-类"><a href="#fs-fswatcher-类" class="header-anchor">#</a> fs.FSWatcher 类</h2> <h2 id="fs-readstream-类"><a href="#fs-readstream-类" class="header-anchor">#</a> fs.ReadStream 类</h2> <h2 id="fs-stats-类"><a href="#fs-stats-类" class="header-anchor">#</a> fs.Stats 类</h2> <p>返回文件信息</p> <ul><li>fs.stat</li> <li>fs.statSync</li> <li>fs.fstat</li> <li>fs.fstatSync</li> <li>fs.lstat</li> <li>fs.lstatSync</li> <li>fs.BigIntStats</li></ul> <h2 id="fs-writestream-类"><a href="#fs-writestream-类" class="header-anchor">#</a> fs.WriteStream 类</h2> <h2 id="fs-readlink-和-fs-readlinksync"><a href="#fs-readlink-和-fs-readlinksync" class="header-anchor">#</a> fs.readlink 和 fs.readlinkSync</h2> <h2 id="fs-read-和-fs-readsync"><a href="#fs-read-和-fs-readsync" class="header-anchor">#</a> fs.read 和 fs.readSync</h2> <p>从指定的文件中读取数据</p> <h2 id="fs-readfile-和-fs-readfilesync"><a href="#fs-readfile-和-fs-readfilesync" class="header-anchor">#</a> fs.readFile 和 fs.readFileSync</h2> <p>读取文件内容</p> <h2 id="fs-readdir-和-fs-readdirsync"><a href="#fs-readdir-和-fs-readdirsync" class="header-anchor">#</a> fs.readdir 和 fs.readdirSync</h2> <p>读取目录内容</p> <h2 id="fs-realpath-和-fs-realpathsync"><a href="#fs-realpath-和-fs-realpathsync" class="header-anchor">#</a> fs.realpath 和 fs.realpathSync</h2> <p>解析路径</p> <h2 id="fs-rename-和-fs-renamesync"><a href="#fs-rename-和-fs-renamesync" class="header-anchor">#</a> fs.rename 和 fs.renameSync</h2> <p>重命名</p> <h2 id="fs-rmdir-和-fs-rmdirsync"><a href="#fs-rmdir-和-fs-rmdirsync" class="header-anchor">#</a> fs.rmdir 和 fs.rmdirSync</h2> <pre><code>    fs.symlink
+    fs.symlinkSync
+
+    fs.truncate
+    fs.truncateSync
+
+    fs.unlink
+    fs.unlinkSync
+
+    fs.unwatchFile
+
+    fs.utimes
+    fs.utimesSync
+
+    fs.watch
+    fs.watchFile
+
+    fs.write
+    fs.writeFile
+
+    fs.writeFileSync
+    fs.writeSync
+
+    fs.writev
+    fs.writevSync
+    
+    fs.Dir
+    fs.Dirent
+
+    fs.ReadStream
+    fs.WriteStream
+
+    fs.access
+    fs.accessSync
+
+    fs.appendFile
+    fs.appendFileSync
+
+    fs.chmod
+    fs.chmodSync
+
+    fs.chown
+    fs.chownSync
+
+    fs.close
+    fs.closeSync
+
+    fs.copyFile
+    fs.copyFileSync
+    fs.createReadStream
+    fs.createWriteStream
+    fs.exists
+    fs.existsSync
+    fs.fchmod
+    fs.fchmodSync
+    fs.fchown
+    fs.fchownSync
+    fs.fdatasync
+    fs.fdatasyncSync
+   
+    fs.fsync
+    fs.fsyncSync
+    fs.ftruncate
+    fs.ftruncateSync
+    fs.futimes
+    fs.futimesSync
+    fs.lchmod
+    fs.lchmodSync
+    fs.lchown
+    fs.lchownSync
+    fs.link
+    fs.linkSync
+   
+    fs.mkdir
+    fs.mkdirSync
+    fs.mkdtemp
+    fs.mkdtempSync
+
+    fs.open
+    fs.openSync
+    fs.opendir
+    fs.opendirSync
+</code></pre></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/pages/node/" class="prev router-link-active">
+          简介
+        </a></span> <span class="next"><a href="/pages/node/zlib.html">
+          zlib-压缩模块
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/assets/js/app.39541f21.js" defer></script><script src="/assets/js/37.df7a0d87.js" defer></script>
+  </body>
+</html>
