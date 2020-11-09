@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /lottie.gif
-actionText: 启程 →
+actionText: 开启新世界 →
 actionLink: /pages/
 # features:
 # - title: 基础
