@@ -1,0 +1,25 @@
+name: Build and Deploy
+on: 
+  push:
+    branches:
+      - docs
+jobs: 
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout
+        uses: actions/checkout@2.3.1
+        with:
+          persist-credentials: false  
+      - name: Install and Build
+        run: |
+          npm install
+          npm run build
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@3.5.9
+        with: 
+          ACCESS_TOKEN: ${{secrets.AUTO_CI}}
+          BRANCH: master
+          FOLDER: dist
+          REPOSITORY_NAME: hygxmm/hygxmm.github.io
+          TARGET_FOLDER: blog
