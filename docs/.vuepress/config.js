@@ -1,7 +1,7 @@
 module.exports = {
   title: "前端笔记", //网站标题
   description:
-    "HTML/ CSS / JavaScript / Vue / Angular / Node / Flutter / 微信小程序 / 数据结构 / 算法 / 浏览器 / 网络 / 优化",
+    "HTML / CSS / JavaScript / Vue  / Node / Flutter / 微信小程序 / 数据结构 / 算法 / 浏览器 / 网络 / 优化",
   head: [
     ["link", { rel: "icon", href: "/logo.png" }], //设置显示在浏览器标签页中的图标
   ],
