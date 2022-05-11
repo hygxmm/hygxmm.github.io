@@ -28,7 +28,7 @@ module.exports = {
       {
         title: "CSS",
         children: [
-          ["/pages/html/", "基础"],
+          ["/pages/css/", "基础"],
           ["/pages/css/example.md", "常用示例"],
         ],
       },

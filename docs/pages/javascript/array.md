@@ -235,28 +235,12 @@ flatMap 对原数组的每个成员执行一个函数,然后对返回值组成�
 + for ... of 循环也会遍历空位
 + entries(),keys(),values(),find(),findIndex()会将空位处理成 undefined
 
-## 
-
-
-## 数组操作
-### 常用数组方法
-+ Array.find()
-+ Array.findIndex()
-+ Array.some()
-+ Array.filter()
-+ Array.map()
-+ Array.reduce()
-+ Array.indexOf()
-+ Array.includes()
-### 数组去重
+## 数组去重
 ```js
 const arr = [...new Set(arr)]
 ```
-### 数组合并
-```js
-const arr = [...arr1,...arr2]
-```
-### 类数组集合转数组
+
+## 类数组集合转数组
 ```js
 const arr = Array.from(args)
 ```
