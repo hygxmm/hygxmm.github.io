@@ -26,3 +26,10 @@ top: 50px;
 3. 父元素高度不能低于sticky元素的高度
 4. sticky元素仅在其父元素内生效
 :::
+
+## IPhoneX底部横条兼容
+```css
+padding-bottom: 0
+padding-bottom: constant(safe-area-inset-bottom);
+padding-bottom: env(safe-area-inset-bottom);
+```
