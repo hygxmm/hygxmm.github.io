@@ -1,4 +1,5 @@
 module.exports = {
+  base: "/blog/",
   title: "前端笔记", //网站标题
   description:
     "HTML / CSS / JavaScript / Vue  / Node / Flutter / 微信小程序 / 数据结构 / 算法 / 浏览器 / 网络 / 优化",
@@ -11,7 +12,7 @@ module.exports = {
   },
   evergreen: true, //不向下兼容IE及低版本浏览器,加快构建速度
   themeConfig: {
-    nav: [{ text: "", link: "" }],
+    // nav: [{ text: "", link: "" }],
     smoothScroll: true,
     navbar: false,
     sidebarDepth: 2,
@@ -69,6 +70,8 @@ module.exports = {
           ["/pages/TypeScript/combat", "实战"],
         ],
       },
+      ["/pages/lodash/", "Lodash"],
+      ["/pages/react/", "React"],
       {
         title: "Vue",
         children: [

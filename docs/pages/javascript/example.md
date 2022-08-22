@@ -24,3 +24,5 @@ function stringifyUrlsearch(search = {}){
 stringifyUrlsearch({name: 'aaa',age: 18}); // "?name=aaa&age=18"
 
 ```
+
+### 
