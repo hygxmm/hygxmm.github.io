@@ -19,12 +19,12 @@
     },
     "homepage": "https://github.com/hygxmm/myBlog#readme",
     "devDependencies": {
-        "@vuepress/plugin-active-header-links": "^1.0.0-rc.1",
-        "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
-        "@vuepress/plugin-nprogress": "^1.0.0-rc.1",
-        "vuepress": "^0.14.3"
+        "@vuepress/plugin-active-header-links": "^1.9.7",
+        "@vuepress/plugin-back-to-top": "^1.9.7",
+        "@vuepress/plugin-nprogress": "^1.9.7",
+        "vuepress": "^1.9.7"
     },
     "dependencies": {
-        "lottie-web": "^5.5.9"
+        "lottie-web": "^5.10.1"
     }
 }

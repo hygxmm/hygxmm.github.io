@@ -1,8 +1,10 @@
-module.exports = {
+import { defineConfig } from 'vuepress/config';
+
+export default defineConfig({
   base: "/blog/",
   title: "前端笔记", //网站标题
   description:
-    "HTML / CSS / JavaScript / Vue  / Node / Flutter / 微信小程序 / 数据结构 / 算法 / 浏览器 / 网络 / 优化",
+    "HTML / CSS / JavaScript / Vue / React / Node / Flutter / 微信小程序 / 数据结构 / 算法 / 浏览器 / 网络 / 优化",
   head: [
     ["link", { rel: "icon", href: "/logo.png" }], //设置显示在浏览器标签页中的图标
   ],
@@ -12,7 +14,6 @@ module.exports = {
   },
   evergreen: true, //不向下兼容IE及低版本浏览器,加快构建速度
   themeConfig: {
-    // nav: [{ text: "", link: "" }],
     smoothScroll: true,
     navbar: false,
     sidebarDepth: 2,
@@ -113,10 +114,9 @@ module.exports = {
       },
     ],
   },
-  evergreen: true,
   plugins: [
-    "@vuepress/active-header-links",
-    "@vuepress/back-to-top",
-    "@vuepress/nprogress",
+    ["@vuepress/active-header-links"],
+    ["@vuepress/back-to-top"],
+    ["@vuepress/nprogress"],
   ],
-};
+})

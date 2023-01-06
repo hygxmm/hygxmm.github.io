@@ -33,3 +33,12 @@ padding-bottom: 0
 padding-bottom: constant(safe-area-inset-bottom);
 padding-bottom: env(safe-area-inset-bottom);
 ```
+
+## 重置浏览器自动填充的样式
+```css
+input:-internal-autofill-previewed,
+input:-internal-autofill-selected {
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+```
+

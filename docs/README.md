@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /lottie.gif
-actionText: 开启新世界 →
+actionText: 开启新世界
 actionLink: /pages/
 # features:
 # - title: 基础
@@ -10,4 +10,4 @@ actionLink: /pages/
 #   details: 敷衍敷衍
 # - title: 高级
 #   details: 敷衍敷衍
-# ---
+---
