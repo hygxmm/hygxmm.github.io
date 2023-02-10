@@ -2,25 +2,12 @@
   "name": "blog",
   "version": "0.0.1",
   "description": "A static site based on dumi",
-  "scripts": {
-    "start": "npm run dev",
-    "dev": "dumi dev",
-    "build": "dumi build",
-    "prepare": "husky install && dumi setup"
-  },
-  "authors": [
-    "858965076@qq.com"
-  ],
   "license": "MIT",
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "lint-staged": {
-    "*.{md,json}": [
-      "prettier --write --no-error-on-unmatched-pattern"
-    ]
+  "scripts": {
+    "build": "dumi build",
+    "dev": "dumi dev",
+    "prepare": "husky install && dumi setup",
+    "start": "npm run dev"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
@@ -29,5 +16,8 @@
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1"
-  }
+  },
+  "authors": [
+    "858965076@qq.com"
+  ]
 }
