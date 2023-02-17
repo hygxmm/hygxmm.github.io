@@ -58,6 +58,21 @@ export default defineConfig({
           title: 'Nginx', children: [
             { title: '介绍', link: '/other/nginx' }
           ]
+        },
+        {
+          title: '微信小程序', children: [
+            { title: '介绍', link: '/other/nginx' }
+          ]
+        },
+        {
+          title: '微信公众号', children: [
+            { title: '介绍', link: '/other/wx_h5' }
+          ]
+        },
+        {
+          title: '常用插件推荐', children: [
+            { title: '介绍', link: '/other/plugin' }
+          ]
         }
       ]
     },
