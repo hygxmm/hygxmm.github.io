@@ -7,9 +7,9 @@ export default defineConfig({
     nav: [
       { title: 'HTML', link: '/html' },
       { title: 'CSS', link: '/css' },
-      { title: 'JavaScript', link: '/css' },
-      { title: 'Vue', link: '/css' },
-      { title: 'React', link: '/css' },
+      { title: 'JavaScript', link: '/javascript' },
+      { title: 'Vue', link: '/vue' },
+      { title: 'React', link: '/react' },
       { title: 'Flutter', link: '/css' },
       { title: 'Other', link: '/other' },
     ],
@@ -35,12 +35,28 @@ export default defineConfig({
             { title: '啊啊', link: '/html/example' }
           ]
         },
-
-
       ],
       '/css': [
         {
           title: 'CSS基础', link: '', children: []
+        }
+      ],
+      '/javascript': [
+        {
+          title: '基础', children: [
+            { title: '数据类型', link: '/javascript' },
+            { title: '数组', link: '/javascript/array' },
+            // { title: 'promise', link: '/javascript/promise' },
+            { title: 'event', link: '/javascript/event' },
+          ]
+        }
+      ],
+      '/react': [
+        {
+          title: '基础知识', children: [
+            { title: 'JSX', link: '/react', },
+            { title: 'API', link: '/react/api', },
+          ]
         }
       ],
       '/other': [
