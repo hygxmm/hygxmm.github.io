@@ -61,6 +61,13 @@ export default defineConfig({
       ],
       '/other': [
         {
+          title: 'TypeScript', children: [
+            { title: '入门', link: '/other/typescript/basics' },
+            { title: '进阶', link: '/other/typescript/advanced' },
+            { title: '实战', link: '/other/typescript/combat' },
+          ]
+        },
+        {
           title: 'Docker', children: [
             { title: '介绍', link: '/other/docker' }
           ]
