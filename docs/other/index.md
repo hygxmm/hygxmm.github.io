@@ -27,3 +27,16 @@ kill -9 1234
 # fnm use [version or alias]
 
 ```
+
+## 使用 vite 创建 react 项目
+
+```shell
+yarn create vite
+yarn add antd
+yarn add --dev --exact prettier
+echo {}> .prettierrc.json
+
+
+
+
+```
