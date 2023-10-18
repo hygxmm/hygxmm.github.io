@@ -7,6 +7,7 @@
 ```shell
 yarn create vite
 yarn
+yarn add --dev sass
 ```
 
 - 安装 prettier

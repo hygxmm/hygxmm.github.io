@@ -69,3 +69,22 @@ nginx -s quit # 安全退出
 nginx -s reload # 重新加载配置文件
 ps aux|grep nginx # 查看nginx进程
 ```
+
+## Mac 安装 Nginx
+
+### 安装
+```shell
+brew install nginx
+```
+### 启动
+```shell
+brew services start nginx
+```
+### 编辑配置文件
+```shell
+vi /opt/homebrew/etc/nginx/nginx.conf
+```
+### 重启nginx
+```shell
+brew services restart nginx
+```
