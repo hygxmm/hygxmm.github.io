@@ -1,5 +1,62 @@
 ## 常用命令
 
+1. 管理 Docker 守护进程
+
+```
+sudo systemctl start docker     #运行Docker守护进程
+sudo systemctl stop docker      #停止Docker守护进程
+sudo systemctl restart docker   #重启Docker守护进程
+sudo systemctl enable docker    #设置Docker开机自启动
+sudo systemctl status docker    #查看Docker的运行状态
+```
+
+2. 管理镜像
+
+- 2.1 拉取镜像
+
+```
+sudo docker pull registry.cn-hangzhou.aliyuncs.com/lxepoo/apache-php5
+```
+
+- 2.2 修改标签。如果镜像名称较长，您可以修改镜像标签以便记忆区分。
+
+```
+sudo docker tag registry.cn-hangzhou.aliyuncs.com/lxepoo/apache-php5:latest aliweb:v1
+```
+
+- 2.3 查看已有镜像。
+
+```
+sudo docker images
+```
+
+- 2.4 强制删除镜像。
+
+```
+sudo docker rmi -f registry.cn-hangzhou.aliyuncs.com/lxepoo/apache-php5
+```
+
+3. 管理容器
+
+- 3.1 启动一个新容器。
+
+  ```
+  sudo docker run -it <镜像ID> /bin/bash
+  ```
+
+- 3.2 启动一个新的容器，让容器在后台运行，并且指定容器的名称。
+  ```
+  sudo docker run -d --name <容器名> <镜像ID>
+  ```
+- 3.3 查看容器 ID。
+  ```
+  sudo docker ps
+  ```
+- 3.4 将容器做成镜像。
+  ```
+  sudo docker commit <容器ID或容器名> <仓库名>:<标签>
+  ```
+
 ### 创建容器镜像
 
 ```shell
@@ -19,7 +76,7 @@ docker run -m 100mi -p 3000:80 project-name
 # project-name 要启动的容器镜像名称
 ```
 
-## 示例
+## Dockerfile 示例
 
 一份常规的 Dockerfile 配置
 

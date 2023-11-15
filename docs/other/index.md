@@ -40,3 +40,39 @@ echo {}> .prettierrc.json
 
 
 ```
+
+## CentOS 服务器环境搭建
+
+1. 远程连接 ECS 实例
+2. 安装 Docker
+
+- 2.1 运行以下命令，下载 docker-ce 的 yum 源。
+
+  ```shell
+  sudo wget -O /etc/yum.repos.d/docker-ce.repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+  ```
+
+- 2.2 运行以下命令，安装 Docker。
+
+  ```shell
+  sudo yum -y install docker-ce
+  ```
+
+3. 执行以下命令，检查 Docker 是否安装成功。
+
+```shell
+sudo docker -v
+```
+
+4. 执行以下命令，启动 Docker 服务，并设置开机自启动。
+
+```shell
+sudo systemctl start docker
+sudo systemctl enable docker
+```
+
+5. 执行以下命令，查看 Docker 是否启动。
+
+```shell
+sudo systemctl status docker
+```
