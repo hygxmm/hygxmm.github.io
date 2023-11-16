@@ -76,3 +76,38 @@ sudo systemctl enable docker
 ```shell
 sudo systemctl status docker
 ```
+
+6. 安装 docker-compose
+
+- 6.1 运行以下命令，安装 setuptools。
+
+  ```
+  pip3 install -U pip setuptools
+  ```
+
+- 6.2 运行以下命令，安装 docker-compose。
+  ```
+  pip3 install docker-compose
+  ```
+
+7. 运行以下命令，验证 docker-compose 是否安装成功。
+
+```
+docker-compose --version
+```
+
+8. 安装 rancher
+
+```
+docker run -d --restart=unless-stopped \
+  -p 8000:80 -p 8443:443 \
+  -v /opt/rancher:/var/lib/rancher \
+  --privileged \
+  rancher/rancher:latest
+```
+
+9. 访问 rancher 管理页面(http://{服务器公网 IP or 绑定的域名}:8443)
+
+10. 创建集群
+
+11. 添加主机
