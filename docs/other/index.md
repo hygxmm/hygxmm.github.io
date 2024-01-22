@@ -48,15 +48,15 @@ echo {}> .prettierrc.json
 
 - 2.1 运行以下命令，下载 docker-ce 的 yum 源。
 
-  ```shell
-  sudo wget -O /etc/yum.repos.d/docker-ce.repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
-  ```
+```shell
+sudo wget -O /etc/yum.repos.d/docker-ce.repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+```
 
 - 2.2 运行以下命令，安装 Docker。
 
-  ```shell
-  sudo yum -y install docker-ce
-  ```
+```shell
+sudo yum -y install docker-ce
+```
 
 3. 执行以下命令，检查 Docker 是否安装成功。
 
@@ -81,18 +81,19 @@ sudo systemctl status docker
 
 - 6.1 运行以下命令，安装 setuptools。
 
-  ```
-  pip3 install -U pip setuptools
-  ```
+```shell
+pip3 install -U pip setuptools
+```
 
 - 6.2 运行以下命令，安装 docker-compose。
-  ```
-  pip3 install docker-compose
-  ```
+
+```shell
+pip3 install docker-compose
+```
 
 7. 运行以下命令，验证 docker-compose 是否安装成功。
 
-```
+```shell
 docker-compose --version
 ```
 

@@ -10,7 +10,7 @@ export default defineConfig({
       { title: 'JavaScript', link: '/javascript' },
       // { title: 'Vue', link: '/vue' },
       { title: 'React', link: '/react' },
-      { title: 'Flutter', link: '/css' },
+      { title: 'Flutter', link: '/flutter' },
       { title: 'Other', link: '/other' },
     ],
     sidebar: {
