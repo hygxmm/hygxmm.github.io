@@ -45,3 +45,23 @@ void initState() {
 
 if (!mounted) return; // 如果页面已销毁，取消后续操作
 ```
+
+## 使用 ADB 无线连接 Android 手机调试 APP
+
+1. 手机和电脑需连接在同一 WiFi 下;
+2. 保证 SDK 为最新版本（adb --version ≥ 30.0.0）;
+3. 手机启用开发者选项和无线调试模式（会提示确认）;
+4. 允许无线调试后，选择使用配对码配对。记下显示的配对码、IP 地址和端口号;
+5. 运行 adb pair ip:port，使用第 4 步中的 IP 地址和端口号;
+6. 根据提示，输入第 3 步中的配对码，系统会显示一条消息，表明您的设备已成功配对;
+7. （仅适用于 Linux 或 Windows）运行 adb connect ip:port;
+
+## ADB 常用命令
+
+## Flutter 常用命令
+
+- flutter run
+
+- flutter build
+
+- flutter install
