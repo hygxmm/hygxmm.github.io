@@ -46,7 +46,16 @@ void initState() {
 if (!mounted) return; // 如果页面已销毁，取消后续操作
 ```
 
-## 使用 ADB 无线连接 Android 手机调试 APP
+## 使用 ADB WLAN 连接 Android 手机调试 APP
+
+1. 手机和电脑需连接在同一 WiFi 下;
+2. 手机开启开发者选项和 USB 调试模式，并通过 USB 连接电脑（即 adb devices -l 可以查看到手机）;
+3. 设置手机的监听 adb tcpip 5555;
+4. 拔掉 USB 线，找到手机的 IP 地址;
+5. 通过 IP 连接到手机 adb connect ip（端口默认：5555）;
+6. adb devices -l 命令查看。
+
+## 使用 ADB WIFI 连接 Android 手机调试 APP
 
 1. 手机和电脑需连接在同一 WiFi 下;
 2. 保证 SDK 为最新版本（adb --version ≥ 30.0.0）;
